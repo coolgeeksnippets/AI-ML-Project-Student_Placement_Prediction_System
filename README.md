@@ -197,3 +197,56 @@ max_depth = 10
 min_samples_split = 15
 min_samples_leaf = 2
 max_features = sqrt
+
+**Results**
+Cross-validation F1 Score: 0.68618
+Test F1 Score:             0.68474
+Test Recall:               0.86819
+The tuned model improved the F1-score and recall compared with the original Random Forest.
+Prediction System
+
+The final system can accept information about a new student and provide:
+
+Predicted placement status
+Placement probability
+Example Prediction
+Prediction: Not Placed
+Probability of Placement: 40.25%
+This prediction represents a model-based estimate and is not a guarantee of actual placement.
+
+Risk Analysis
+Placement probability was divided into three risk categories:
+Placement Probability	Risk Level
+< 50%	High Risk
+50% – 74.99%	Medium Risk
+≥ 75%	Low Risk
+Test Dataset Risk Distribution
+Medium Risk : 16,742
+High Risk   : 3,258
+Low Risk    : 0
+These categories are analytical interpretations and should not be treated as guaranteed outcomes.
+🛠️ Technologies Used
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-learn
+Jupyter Notebook
+Limitations
+
+The model is based on historical student data, so its predictions may not perfectly represent future placement conditions.
+
+Placement outcomes can also depend on factors not present in the dataset, such as:
+
+Economic conditions
+Job-market demand
+Company hiring policies
+Interview difficulty
+Number of available vacancies
+Individual circumstances
+
+Therefore, this system should be considered a decision-support tool rather than an absolute predictor.
+
+Author - Ananya Srivastava
+If you find this project useful, consider giving the repository a star!
